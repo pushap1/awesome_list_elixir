@@ -1,5 +1,4 @@
 use Mix.Config
-
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :awesome, AwesomeWeb.Endpoint,
@@ -8,6 +7,10 @@ config :awesome, AwesomeWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :github_api_client, :base_url, "https://api.github.com"
+
+config :github_api_client, :http_client, Mock
 
 # Configure your database
 config :awesome, Awesome.Repo,
